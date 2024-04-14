@@ -1,0 +1,29 @@
+<div class="container">
+    <nav class="navbar bcolor">
+      <a class="navbar-brand" href="/">{{task.title}}</a>
+      <a class="navbar-brand" routerLink="/">Back</a>
+    </nav>
+
+    <div class="form-group container">
+        <label for="exampleFormControlInput1">Title</label>
+        <input type="text" class="form-control"  [(ngModel)]="task.title">
+     
+        <label>Descreption</label>
+        <textarea  type="text" class="form-control" [(ngModel)]="task.description" ></textarea>
+     
+          <label for="exampleFormControlInput1">Due Date</label>
+          <input  type="text" class="form-control" [(ngModel)]="task.due_date">
+
+          <div class="container">
+
+            <input type="checkbox" class="custom-control-input" [(ngModel)]="task.isChecked">
+            <label class="custom-control-label" for="customCheck1">Done</label>
+
+          </div>
+          
+    </div> 
+
+
+
+    <button class="btn btn-primary styled-button" (click)="editTask()">Save</button>
+</div>

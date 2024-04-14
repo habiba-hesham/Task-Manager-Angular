@@ -1,0 +1,20 @@
+<div class="container">
+<nav class="navbar bcolor">
+  <a class="navbar-brand" href="/">Task Manager</a>
+  <a routerLink="/add-task" class="btn btn-outline-dark right-button" >Add task</a>
+</nav>
+
+
+    <div *ngIf="tasksService.tasks.length != 0">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let task of tasksService.tasks; index as i">
+            {{task.title}}
+            
+            <button class="btn btn-outline-danger btn-sm right-button " (click)="deleteTask(i)">Delete</button>
+            <a [routerLink]="['/edit-task', i]" class="btn btn-outline-secondary btn-sm right-button ">Edit</a>
+            <input type="checkbox" class="custom-control-input right-button" [(ngModel)]="task.isChecked" (change)="saveState(task.isChecked, i)" />
+            </li>
+        </ul>
+    </div>
+
+</div>

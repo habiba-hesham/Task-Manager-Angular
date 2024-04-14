@@ -1,0 +1,18 @@
+<div class="container">
+  <nav class="navbar bcolor">
+    <a class="navbar-brand" href="/">Task Manager</a>
+    <a class="navbar-brand" routerLink="/">Back</a>
+  </nav>
+  <div class="form-group container">
+      <label for="exampleFormControlInput1">Title</label>
+      <input #title type="text" class="form-control">
+   
+      <label for="exampleFormControlTextarea1">Descreption</label>
+      <textarea #description type="text" class="form-control" ></textarea>
+   
+        <label for="exampleFormControlInput1">Due Date</label>
+        <input #due_date type="text" class="form-control" >
+    </div> 
+
+    <button class="btn btn-primary styled-button" (click)="addTask(title, description, due_date)">Add</button>
+</div>

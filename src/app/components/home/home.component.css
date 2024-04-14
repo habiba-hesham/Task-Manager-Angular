@@ -1,0 +1,19 @@
+.right-button {
+    float: right; /* Align the button to the left */
+    margin-right: 30px;
+}
+ .navbar {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #e28743; 
+    color: black;
+    padding: 10px;
+    display: flex; 
+    justify-content: space-between; 
+}
+.title {
+    font-weight: bold; 
+} 
+.bcolor{
+    background-color: #abdbe3;
+}
